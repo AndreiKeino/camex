@@ -1,0 +1,5 @@
+Portfolio optimization:
+
+https://colab.research.google.com/github/cvxgrp/cvx_short_course/blob/master/applications/portfolio_optimization.ipynb
+
+https://www.cvxpy.org/examples/index.html

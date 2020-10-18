@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>The L1 trend filtering</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+<h1 id="introduction">The L1 trend filtering - introduction.<br><br></h1>
+<p>The problem of estimating underlying trends in time series data arises in a variety of disciplines. 
+The ℓ1 trend filtering method produces trend estimates x that are piecewise linear from the time series y.</p>
+<p>The ℓ1 trend estimation problem can be formulated as</p>
+<p>$$
+minimize \; (1/2) ||y-x||^2_2+λ||Dx||_1,
+$$</p>
+<p>with variable $x$, problem data $y$ and parameter $λ$, with $λ\geq0$ </p>
+<p>where $D$ is the second difference matrix with rows</p>
+$$
+[0 \quad \dots \quad 0 \quad -1 \quad 2 \quad -1 \quad 0 \quad \dots \quad 0]
+$$
+<!--
+<p>
+\begin{pmatrix}
+1 &amp; -2 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; -2 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+&amp; &amp; &amp; &amp; \vdots  \\
+0 &amp; 0 &amp; 0&amp; 0 &amp; \cdots &amp; 1 &amp; -2 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0&amp; 0 &amp; \cdots &amp; 0 &amp; 1 &amp; -2 &amp; 1\\
+\end{pmatrix}
+</p>
+-->
+
+<h3 id="Editable-input-parameters">Editable input parameters in the example: problem data $y$ and parameter $λ.$</h3>
+
+<h2 id="example-l1-trend-filtering-plot-for-bitcoin-daily-close-">Example: L1 trend filtering for Bitcoin daily close.</h2>
+<p><img src="https://andreikeino.github.io/camex/images/console_output/L1_trend_filtering_bitcoin.png" 
+alt="image"></p>
+
+<h2 id="websites-used-">The code and explanation are adopted from:</h2>
+<p><a href="https://www.cvxpy.org/examples/applications/l1_trend_filter.html">https://www.cvxpy.org/examples/applications/l1_trend_filter.html</a></p>
+
+</body>
+</html>
