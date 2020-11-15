@@ -1,6 +1,6 @@
 mu_fname = r"C:\! Convex_Optimization\Coding_tasks\!CAMEX\package\CAMEX\camex\addons\cvx\Portfolio_optimization_2\data\mu_data.csv"
 sigma_fname = r"C:\! Convex_Optimization\Coding_tasks\!CAMEX\package\CAMEX\camex\addons\cvx\Portfolio_optimization_2\data\sigma_data.csv"
-%matplotlib qt5
+%matplotlib inline
 
 # https://colab.research.google.com/github/cvxgrp/cvx_short_course/blob/master/applications/portfolio_optimization.ipynb
 
