@@ -1,0 +1,3 @@
+[console_scripts]
+camex = camex.cam_ex:main
+

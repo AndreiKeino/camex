@@ -1,0 +1,6 @@
+L1 Trend Filtering:
+
+https://www.cvxpy.org/examples/applications/l1_trend_filter.html
+
+https://stanford.edu/~boyd/papers/pdf/l1_trend_filter.pdf
+

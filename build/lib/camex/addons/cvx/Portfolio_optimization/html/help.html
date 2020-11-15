@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+
+<title>The L1 trend filtering</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full" charset="utf-8">
+</script>
+
+<!--
+<script type="text/javascript"
+src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"> 
+src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+src="https://andreikeino.github.io/mathjax/mathjax_from_jupyter_notebook_6_1_4.js?config=TeX-AMS-MML_HTMLorMML-full,Safe&delayStartupUntil=configured" 
+charset="utf-8"></script>
+</head>
+-->
+<body>
+
+<h3 id="portfolio-allocation-vector">Portfolio allocation vector</h3>
+<p>In this example we show how to do portfolio optimization using CVXPY.
+We begin with the basic definitions.
+In portfolio optimization we have some amount of money to invest in any of $n$ different assets. 
+We choose what fraction $w_i$ of our money to invest in each asset $i$, $i=1, \ldots, n$.</p>
+<p>We call $w\in {\bf R}^n$ the <em>portfolio allocation vector</em>.
+We of course have the constraint that ${\mathbf 1}^T w =1$.
+The allocation $w_i&lt;0$ means a <em>short position</em> in asset $i$, or that we borrow shares to sell now that we must replace later.
+The allocation $w \geq 0$ is a <em>long only</em> portfolio.
+The quantity 
+$ ||w||_1 = {\bf 1}^T w_+ + {\bf 1}^T w_- $
+
+<!--
+<p>
+ $$\|w\|<em>1 = {\mathbf{1}}^T w</em>+ + {\mathbf 1}^T w_- $$
+</p>
+-->
+is known as <em>leverage</em>.</p>
+<h3 id="asset-returns">Asset returns</h3>
+<p>We will only model investments held for one period. The initial prices are $p_i &gt; 0$. The end of period prices 
+are $p_i^+ &gt;0$. The asset (fractional) returns are $r_i = (p_i^+-p_i)/p_i$. The porfolio (fractional) return 
+is $R = r^Tw$.</p>
+<p>A common model is that $r$ is a random variable with mean ${\bf E}r = \mu$ 
+and covariance ${\bf E{(r-\mu)(r-\mu)^T}} = \Sigma$.
+It follows that $R$ is a random variable with ${\bf E}R = \mu^T w$ and ${\bf var}(R) = w^T\Sigma w$.
+${\bf E}R$ is the (mean) <em>return</em> of the portfolio. ${\bf var}(R)$ is the <em>risk</em> of the portfolio.
+(Risk is also sometimes given as ${\bf std}(R) = \sqrt{{\bf var}(R)}$.)</p>
+<p>Portfolio optimization has two competing objectives: high return and low risk.</p>
+<h3 id="classical-markowitz-portfolio-optimization">Classical (Markowitz) portfolio optimization</h3>
+<p>Classical (Markowitz) portfolio optimization solves the optimization problem</p>
+<p>
+
+\begin{array}{ll} \mbox{maximize} & \mu^T w - \gamma w^T\Sigma w\\
+\mbox{subject to} & {\bf 1}^T w = 1, \quad w \in {\cal W},
+\end{array}
+
+</p>
+<p>where $w \in {\bf R}^n$ is the optimization variable, $\cal W$ is a set of allowed portfolios (e.g., ${\cal W} = {\bf R}_+^n$ for a long only portfolio), and $\gamma &gt;0$ is the <em>risk aversion parameter</em>.</p>
+<p>The objective $\mu^Tw - \gamma w^T\Sigma w$ is the <em>risk-adjusted return</em>. Varying $\gamma$ gives the optimal <em>risk-return trade-off</em>. 
+We can get the same risk-return trade-off by fixing return and minimizing risk.</p>
+<h3 id="example">Example</h3>
+<p>In the following example we compute and plot the optimal risk-return trade-off for fictional $10$ assets, restricting ourselves to a long only portfolio.</p>
+<h3 id="user-input">User input</h3>
+<p>The input values of these assets - covariance matrix $\Sigma$ and mean values vector $\mu$ are read from the input files, the files can be chosen in the <em>Control</em> window. The <em>risk aversion parameter</em> $\gamma$ here is the 
+logarithmic sequence in some range. For the estimates you can choose two indexes (marker # 1 and marker # 2) 
+from this array in the <em>Control</em> window. Some statistics for these two values will be shown 
+in the plots and in the console output. </p>
+<h3 id="example-plots">Example plots</h3>
+<p>The optimal risk-return trade-off for $10$ assets, restricting ourselves to a long only portfolio.
+<img src="https://andreikeino.github.io/camex/images/console_output/addons/cvx/portfolio_optimization/long_only_trade_off_curve.png" alt="image"></p>
+<p>Plot of the return distributions for the two risk aversion values marked on the trade-off curve. Notice that the probability of a loss is near 0 for the low risk value and far above 0 for the high risk value.</p>
+<p><img src="https://andreikeino.github.io/camex/images/console_output/addons/cvx/portfolio_optimization/probability_density_for_portfolio_return.png" alt="image"></p>
+<h3 id="the-code-and-explanation-adopted-from-">The code and explanation adopted from:</h3>
+<p><a href="https://colab.research.google.com/github/cvxgrp/cvx_short_course/blob/master/applications/portfolio_optimization.ipynb#scrollTo=OYHDQ8PM4tN8">https://colab.research.google.com/github/cvxgrp/cvx_short_course/blob/master/applications/portfolio_optimization.ipynb#scrollTo=OYHDQ8PM4tN8</a></p>
+
+</body>
+</html>

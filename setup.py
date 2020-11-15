@@ -19,16 +19,19 @@ from os import path
 this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
-	
+
+from camex.app_data.ui_info import app_version
+
 setup(
    name='camex',
-   version='0.0.1a1',
+   #  version='0.0.1a2',
+   version= app_version,
    author='Andrei Keino',
    author_email='andreikeino@gmail.com',
    packages=['camex'],
    entry_points={
          'console_scripts': ['camex=camex.cam_ex:main'],},
-   url='http://pypi.python.org/pypi/camex/',
+   url='https://andreikeino.github.io/camex/introduction.html',
    license='LICENSE.txt',
    include_package_data=True,
    description='Computational Applied Mathematics EXamples',

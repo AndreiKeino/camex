@@ -1,0 +1,7 @@
+https://colab.research.google.com/github/cvxgrp/cvx_short_course/blob/master/applications/huber_regression.ipynb#scrollTo=TuQVP9Y1BWpU
+https://colab.research.google.com/github/cvxgrp/cvx_short_course/blob/master/applications/quantile_regression.ipynb
+
+https://www.cvxpy.org/examples/index.html
+
+
+

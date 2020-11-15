@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+
+<title>Portfolio optimization 2</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full" charset="utf-8">
+</script>
+
+<!--
+<script type="text/javascript"
+src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"> 
+src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+src="https://andreikeino.github.io/mathjax/mathjax_from_jupyter_notebook_6_1_4.js?config=TeX-AMS-MML_HTMLorMML-full,Safe&delayStartupUntil=configured" 
+charset="utf-8"></script>
+</head>
+-->
+<body>
+
+<h3 id="portfolio-constraints">Portfolio constraints</h3>
+<p>There are many other possible portfolio constraints besides the long only constraint. With no constraint (${\cal W} = {\bf R}^n$), the optimization problem has a simple analytical solution. We will look in detail at a <em>leverage limit</em>, or the constraint that $|w |_1 \leq L^\mathrm{max}$.</p>
+<p>Another interesting constraint is the <em>market neutral</em> constraint $m^T \Sigma w =0$, where $m_i$ is the capitalization of asset $i$.
+$M = m^Tr$ is the <em>market return</em>, and $m^T \Sigma w = {\bf cov}(M,R)$.
+The market neutral constraint ensures that the portfolio return is uncorrelated with the market return.</p>
+<h3 id="example">Example</h3>
+<p>In the following code we compute and plot optimal risk-return trade-off curves for leverage limits of 1, 2, and 4.
+Notice that more leverage increases returns and allows greater risk.</p>
+
+<h3 id="the-code-and-explanation-adopted-from-">The code and explanation adopted from:</h3>
+<p><a href="https://colab.research.google.com/github/cvxgrp/cvx_short_course/blob/master/applications/portfolio_optimization.ipynb#scrollTo=OYHDQ8PM4tN8">https://colab.research.google.com/github/cvxgrp/cvx_short_course/blob/master/applications/portfolio_optimization.ipynb#scrollTo=OYHDQ8PM4tN8</a></p>
+
+</body>
+</html>

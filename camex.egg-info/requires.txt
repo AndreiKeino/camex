@@ -1,0 +1,7 @@
+PyQtWebEngine
+qtconsole
+matplotlib
+cvxpy
+cvxopt
+pandas
+pandas-datareader

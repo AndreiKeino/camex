@@ -13,5 +13,7 @@
 
 *  Classical (Markowitz) portfolio optimization.
 
+*  Portfolio optimization 2.
+
 
 ### Please read [the documentation](https://andreikeino.github.io/camex/introduction.html) for more information.

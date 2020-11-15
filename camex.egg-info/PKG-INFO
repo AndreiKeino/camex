@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: camex
+Version: 0.0.1a2
+Summary: Computational Applied Mathematics EXamples
+Home-page: https://andreikeino.github.io/camex/introduction.html
+Author: Andrei Keino
+Author-email: andreikeino@gmail.com
+License: LICENSE.txt
+Description: ## Introducing the Camex:
+        
+        #### Camex stands for "Computational Applied Mathematics EXamples."  
+        ![image](https://andreikeino.github.io/camex/images/user_guide/camex_windows.jpg)
+        
+        * As it is clear from the name, the program represent a collection of a computational examples.
+         
+        * It has a user - friendly GUI and it can be used by anyone who possess no programming skills.
+          
+        #### Example collection so far...
+        
+        * The L1 trend filtering.
+        
+        *  Classical (Markowitz) portfolio optimization.
+        
+        *  Portfolio optimization 2.
+        
+        
+        ### Please read [the documentation](https://andreikeino.github.io/camex/introduction.html) for more information.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
