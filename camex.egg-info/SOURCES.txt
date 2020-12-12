@@ -12,6 +12,7 @@ camex.egg-info/top_level.txt
 camex/.vscode/settings.json
 camex/__pycache__/__init__.cpython-37.pyc
 camex/addons/__pycache__/test.cpython-38.pyc
+camex/addons/cvx/Huber_regression/references.txt
 camex/addons/cvx/L1_trend_filtering/__init__.py
 camex/addons/cvx/L1_trend_filtering/execute.py
 camex/addons/cvx/L1_trend_filtering/get_stock_data.py
@@ -39,6 +40,8 @@ camex/addons/cvx/Portfolio_optimization_2/data/mu_data.csv
 camex/addons/cvx/Portfolio_optimization_2/data/sigma_data.csv
 camex/addons/cvx/Portfolio_optimization_2/html/help.html
 camex/addons/cvx/Portfolio_optimization_2/html/markdown.md
+camex/addons/cvx/Portfolio_optimization_2/html/images/trade_off_curves.png
+camex/addons/cvx/Quantile_regression/references.txt
 camex/addons/cvx/__pycache__/test.cpython-38.pyc
 camex/app_data/__init__.py
 camex/app_data/addon_data.py
