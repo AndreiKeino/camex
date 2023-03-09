@@ -1,6 +1,6 @@
-## Introducing the Camex:
+# Introducing the Camex:
 
-#### Camex stands for "Computational Applied Mathematics EXamples."  
+### Camex stands for "Computational Applied Mathematics EXamples."  
 ![image](https://andreikeino.github.io/camex/images/user_guide/camex_windows.jpg)
 
 * As it is clear from the name, the program represent a collection of a computational examples.
@@ -9,7 +9,7 @@
 
 * The GUI have a web-browser to show the documentation, pane with controls to enter the input parameters and the python console to show the script output.
   
-#### Example collection so far...
+# Example collection so far...
 
 * The L1 trend filtering.
 
