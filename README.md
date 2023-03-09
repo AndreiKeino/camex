@@ -17,15 +17,15 @@
 
 *  Portfolio optimization 2.
 
-* Installation.
-** pip install camex
+# Installation.
+### pip install camex
 
-* To start the program execute the command
-** camex
-* in the console
+# To start the program execute the command
+### camex
+### in the console
 
-* Python versions:
-* 3.7, 3.8.
+# Python versions:
+### 3.7, 3.8.
 
 
 ### Please read [the documentation](https://andreikeino.github.io/camex/introduction.html) for more information.
