@@ -1,4 +1,4 @@
-# Introducing the Camex:
+# Introducing the Camex.
 
 ### Camex stands for "Computational Applied Mathematics EXamples."  
 ![image](https://andreikeino.github.io/camex/images/user_guide/camex_windows.jpg)
